@@ -1,0 +1,16 @@
+:root {
+    /* here variables goes */
+    --color-primary: #cb5c47;
+  }
+  
+  /* importar bootstrap */
+  @import '~bootstrap/dist/css/bootstrap.min.css';
+  
+  /* .btn--primary {
+    color: var(--color-primary);
+  }
+   */
+
+  .photo {
+    max-width:300px;
+}
