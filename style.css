@@ -1,18 +1,69 @@
 :root {
-    /* here variables goes */
-    --color-primary: #cb5c47;
-    --color-secondary: #035F4F;
-  }
-  
-  /* importar bootstrap */
-  @import '~bootstrap/dist/css/bootstrap.min.css';
-  
-  /* .btn--primary {
+  /* here variables goes */
+  --color-primary: #cb5c47;
+  --color-secondary: #b0c44a;
+
+  --font-headings: 'Bricolage Grotesque', sans-serif;
+  --font-body: "Fira Mono", monospace;
+
+  --spacer-lg:3rem;
+}
+
+/* importar cosas */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Mono:wght@400;500;700&display=swap');
+
+
+/* Fonts */
+h1.title{
+  font-family: var(--font-headings);
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: var(--spacer-lg);
+  color:var(--color-primary)
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: larger;
+}
+
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* .btn--primary {
     color: var(--color-primary);
   }
    */
 
-  .photo {
-    max-width:300px;
+
+
+
+.icon-large {
+  color: purple;
+  font-size: 5rem;
 }
 
+
+.nav-bar {
+  background-color: var(--color-primary)
+}
+
+
+
+.description img {
+  background-color: var(--color-secondary);
+  max-width: 300px;
+  border-radius: 50%;
+
+  float: left;
+  shape-outside: ellipse(150px 150px at 50% 50%);
+  margin-right: 1rem;
+}
+
+footer{
+  display:flex;
+  flex-direction: row-reverse;
+}
