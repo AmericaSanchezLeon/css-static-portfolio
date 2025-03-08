@@ -1,69 +1,139 @@
 :root {
-  /* here variables goes */
-  --color-primary: #cb5c47;
-  --color-secondary: #b0c44a;
+  /* Colores */
+  --color-light: #CCC9C3;
+  --color-lighter: #E7E3DC;
+  --color-dark: #555555;
+  --color-darker: #2F2F2F;
 
+
+  --color-yellow: #c07702;
+  --color-orange: #CB5C47;
+  --color-pink: #E04F88;
+  --color-purple: #8558C8;
+  --color-green: #86991C;
+  --color-periwinkle: #5881CB;
+
+  /* Fuentes */
   --font-headings: 'Bricolage Grotesque', sans-serif;
   --font-body: "Fira Mono", monospace;
 
-  --spacer-lg:3rem;
+  /* Spacers */
+  --spacer-lg: 3rem;
+  --spacer-md: 1rem;
+  --spacer-sm: 0.5rem;
 }
 
-/* importar cosas */
+/* importaciones */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Mono:wght@400;500;700&display=swap');
 
 
-/* Fonts */
-h1.title{
-  font-family: var(--font-headings);
-  font-size: xx-large;
-  font-weight: bolder;
-  margin: var(--spacer-lg);
-  color:var(--color-primary)
-}
-
-p {
+body.container-portfolio {
+  margin: 0 auto;
+  color: var(--color-darker);
+  background-color: var(--color-lighter);
   font-family: var(--font-body);
-  font-size: larger;
 }
 
-*{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+*::selection {
+  background-color: var(--color-pink);
+  color: var(--color-lighter);
 }
 
-/* .btn--primary {
-    color: var(--color-primary);
-  }
-   */
+footer {
+  background-color: var(--color-light);
+  display: block;
+  text-align: center;
+}
+
+section {
+  padding: var(--spacer-lg);
+}
+
+#contact li {
+  list-style: none;
+}
+
+#contact li:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-periwinkle);
+}
+
+button a:hover {
+  color: var(--color-yellow);
+  text-decoration: underline;
+}
+
+/* Fonts */
+h1.title {
+  font-family: var(--font-headings);
+  font-size: 5rem;
+  font-weight: bolder;
+  position: relative;
+}
+
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 15px;
+  top: 1px;
+  z-index: -1;
+  background-image: linear-gradient(to right, var(--color-yellow), var(--color-orange), var(--color-pink), var(--color-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
 
 
 
 
 .icon-large {
-  color: purple;
-  font-size: 5rem;
+  color: var(--color-yellow);
+  font-size: 1rem;
+} 
+
+.navbar.nav-bar {
+  background-color: var(--color-light);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
 
-.nav-bar {
-  background-color: var(--color-primary)
-}
 
-
-
-.description img {
-  background-color: var(--color-secondary);
+#about img {
+  background-color: var(--color-yellow);
   max-width: 300px;
   border-radius: 50%;
-
-  float: left;
+  height: 100%;
+  /* float: left;
   shape-outside: ellipse(150px 150px at 50% 50%);
-  margin-right: 1rem;
+  margin-right: 1rem; */
 }
 
-footer{
-  display:flex;
-  flex-direction: row-reverse;
+
+/* Buttons */
+a.my-button{
+  border: solid 0.5rem var(--color-orange);
+  padding: 1rem;
+  font-size: larger;
+  color: var(--color-orange);
+  text-decoration: none;
+
+}
+
+a.my-button:hover{
+  background-color: var(--color-purple);
+  color: var(--color-lighter);
+  text-decoration: none;
+  border: solid 0.5rem var(--color-purple);
+}
+
+
+/* Class elements */
+.project-detail {
+  border: 0.5rem solid var(--color-green);
+  ;
 }
