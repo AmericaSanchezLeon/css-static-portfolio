@@ -73,6 +73,10 @@ h1.title {
   position: relative;
 }
 
+h2,h3{
+  font-family: var(--font-headings);
+}
+
 .title::after {
   content: attr(data-text);
   position: absolute;
@@ -88,17 +92,26 @@ h1.title {
 
 
 
+/* Icons */
 
 .icon-large {
   color: var(--color-yellow);
   font-size: 1rem;
 } 
 
+
+
+/* Navbar */
 .navbar.nav-bar {
   background-color: var(--color-light);
   position: sticky;
   top: 0;
   overflow: hidden;
+}
+
+.nav-bar-icon{
+  display: block;
+  max-width: 3rem;
 }
 
 
