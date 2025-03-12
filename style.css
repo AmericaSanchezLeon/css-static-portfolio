@@ -75,6 +75,7 @@ h1.title {
 
 h2,h3{
   font-family: var(--font-headings);
+  padding: var(--spacer-md);
 }
 
 .title::after {
@@ -128,7 +129,7 @@ h2,h3{
 
 
 /* Buttons */
-a.my-button{
+a.a-button{
   border: solid 0.5rem var(--color-orange);
   padding: 1rem;
   font-size: larger;
@@ -137,7 +138,23 @@ a.my-button{
 
 }
 
-a.my-button:hover{
+a.a-button:hover{
+  background-color: var(--color-purple);
+  color: var(--color-lighter);
+  text-decoration: none;
+  border: solid 0.5rem var(--color-purple);
+}
+
+
+button.my-button{
+  border: solid 0.5rem var(--color-orange);
+  padding: 1rem;
+  font-size: larger;
+  color: var(--color-orange);
+  background-color: transparent;
+}
+
+button.my-button:hover{
   background-color: var(--color-purple);
   color: var(--color-lighter);
   text-decoration: none;
