@@ -61,13 +61,13 @@ section {
 
 
 
-#contact li , a.contact-list {
+#contact li , #contact a{
   list-style: none;
   color: var(--color-darker);
   text-decoration: none;
 }
 
-#contact li:hover , a.contact-list:hover {
+#contact li:hover , #contact a:hover {
   cursor: pointer;
   font-weight: bold;
   color: var(--color-purple);
