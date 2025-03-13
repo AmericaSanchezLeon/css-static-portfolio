@@ -33,6 +33,10 @@ body.container-portfolio {
   color: var(--color-darker);
   background-color: var(--color-lighter);
   font-family: var(--font-body);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 *::selection {
@@ -40,25 +44,35 @@ body.container-portfolio {
   color: var(--color-lighter);
 }
 
-footer {
+*:focus{
+background-color: var(--color-green);
+}
+
+footer.my-footer p{
   background-color: var(--color-light);
-  display: block;
+  padding: 1rem;
   text-align: center;
+  margin-bottom: 0;
 }
 
 section {
   padding: var(--spacer-lg);
 }
 
-#contact li {
+
+
+#contact li , a.contact-list {
   list-style: none;
+  color: var(--color-darker);
+  text-decoration: none;
 }
 
-#contact li:hover {
+#contact li:hover , a.contact-list:hover {
   cursor: pointer;
   font-weight: bold;
-  color: var(--color-periwinkle);
+  color: var(--color-purple);
 }
+
 
 button a:hover {
   color: var(--color-yellow);
@@ -81,8 +95,8 @@ h2,h3{
 .title::after {
   content: attr(data-text);
   position: absolute;
-  left: 15px;
-  top: 1px;
+  left: 5px;
+  top: 2px;
   z-index: -1;
   background-image: linear-gradient(to right, var(--color-yellow), var(--color-orange), var(--color-pink), var(--color-purple));
   background-clip: text;
