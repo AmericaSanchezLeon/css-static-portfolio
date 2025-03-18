@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="src/favicon.svg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="main.js" type="text/javascript" defer></script>
 
   <!-- importar footer -->
   <link rel="import" href="src/footer.html">
@@ -95,8 +94,10 @@
           Download resume
         </a>
 
+
         <!-- Button option 2 -->
-        <button type="button" class="my-button"
+        <button  
+          class="my-button"
           onclick="location.href='https://drive.google.com/file/d/1xJj8bZX_zk5lhwQJ8gTIlVxgIIlR9bhR/view?usp=sharing'"
           type="button">
           Download resume 2
@@ -176,6 +177,7 @@
     </ul>
   </section>
 
+
   <!-- Script para footer reusable -->
   <script>
     fetch('footer.html')
@@ -186,6 +188,9 @@
         document.body.appendChild(footerContainer);
       });
   </script>
+
+    <!-- Script para mostrar active in singlepage -->
+  <script src="main.js" type="text/javascript" defer></script>
 
 </body>
 

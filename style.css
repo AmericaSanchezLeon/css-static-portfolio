@@ -85,9 +85,10 @@ h1.title {
   font-size: 5rem;
   font-weight: bolder;
   position: relative;
+  z-index: 0;
 }
 
-h2,h3{
+h2,h3,h4{
   font-family: var(--font-headings);
   padding: var(--spacer-md);
 }
@@ -105,14 +106,11 @@ h2,h3{
 
 }
 
-
-
 /* Icons */
-
 .icon-large {
   color: var(--color-yellow);
   font-size: 1rem;
-} 
+}
 
 
 
@@ -124,6 +122,12 @@ h2,h3{
   overflow: hidden;
 }
 
+/* styles to make active link different */
+.navbar .navbar-nav .nav-link.active{
+  color: var(--color-orange) !important;
+  font-weight: bold;
+}
+
 .nav-bar-icon{
   display: block;
   max-width: 3rem;
@@ -133,8 +137,8 @@ h2,h3{
 
 #about img {
   background-color: var(--color-yellow);
-  max-width: 300px;
-  border-radius: 50%;
+  width: 40vw;
+  border-radius: 50% ;
   height: 100%;
   /* float: left;
   shape-outside: ellipse(150px 150px at 50% 50%);
@@ -149,7 +153,6 @@ a.a-button{
   font-size: larger;
   color: var(--color-orange);
   text-decoration: none;
-
 }
 
 a.a-button:hover{
@@ -180,4 +183,16 @@ button.my-button:hover{
 .project-detail {
   border: 0.5rem solid var(--color-green);
   ;
+}
+
+.rect-rojo{
+  background-color: red;
+  padding: 0.5rem;
+}
+.rect-img{
+background-image: url("./src/paisaje_1.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 3rem;
 }
