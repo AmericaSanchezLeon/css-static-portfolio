@@ -5,7 +5,6 @@
   --color-dark: #555555;
   --color-darker: #2F2F2F;
 
-
   --color-yellow: #c07702;
   --color-orange: #CB5C47;
   --color-pink: #E04F88;
@@ -44,11 +43,11 @@ body.container-portfolio {
   color: var(--color-lighter);
 }
 
-*:focus{
-background-color: var(--color-green);
+*:focus {
+  background-color: var(--color-periwinkle);
 }
 
-footer.my-footer p{
+footer.my-footer p {
   background-color: var(--color-light);
   padding: 1rem;
   text-align: center;
@@ -61,13 +60,15 @@ section {
 
 
 
-#contact li , #contact a{
+#contact li,
+#contact a {
   list-style: none;
   color: var(--color-darker);
   text-decoration: none;
 }
 
-#contact li:hover , #contact a:hover {
+#contact li:hover,
+#contact a:hover {
   cursor: pointer;
   font-weight: bold;
   color: var(--color-purple);
@@ -88,7 +89,9 @@ h1.title {
   z-index: 0;
 }
 
-h2,h3,h4{
+h2,
+h3,
+h4 {
   font-family: var(--font-headings);
   padding: var(--spacer-md);
 }
@@ -120,26 +123,33 @@ h2,h3,h4{
   position: sticky;
   top: 0;
   overflow: hidden;
+  z-index: 2;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  background-color: var(--color-pink);
+  color: var(--color-lighter);
 }
 
 /* styles to make active link different */
-.navbar .navbar-nav .nav-link.active{
-  color: var(--color-orange) !important;
+.navbar .navbar-nav .nav-link.active {
+  color: var(--color-lighter) !important;
   font-weight: bold;
+  background-color: var(--color-orange);
 }
 
-.nav-bar-icon{
+.nav-bar-icon {
   display: block;
   max-width: 3rem;
 }
 
 
 
-#about img {
+#about * img {
   background-color: var(--color-yellow);
-  width: 40vw;
-  border-radius: 50% ;
-  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  height: auto;
   /* float: left;
   shape-outside: ellipse(150px 150px at 50% 50%);
   margin-right: 1rem; */
@@ -147,7 +157,7 @@ h2,h3,h4{
 
 
 /* Buttons */
-a.a-button{
+a.a-button {
   border: solid 0.5rem var(--color-orange);
   padding: 1rem;
   font-size: larger;
@@ -155,7 +165,7 @@ a.a-button{
   text-decoration: none;
 }
 
-a.a-button:hover{
+a.a-button:hover {
   background-color: var(--color-purple);
   color: var(--color-lighter);
   text-decoration: none;
@@ -163,7 +173,7 @@ a.a-button:hover{
 }
 
 
-button.my-button{
+button.my-button {
   border: solid 0.5rem var(--color-orange);
   padding: 1rem;
   font-size: larger;
@@ -171,7 +181,7 @@ button.my-button{
   background-color: transparent;
 }
 
-button.my-button:hover{
+button.my-button:hover {
   background-color: var(--color-purple);
   color: var(--color-lighter);
   text-decoration: none;
@@ -185,14 +195,63 @@ button.my-button:hover{
   ;
 }
 
-.rect-rojo{
+.rect-rojo {
   background-color: red;
   padding: 0.5rem;
 }
-.rect-img{
-background-image: url("./src/paisaje_1.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-padding: 3rem;
+
+.rect-img {
+  background-image: url("./src/paisaje_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+}
+
+/* heart icon */
+.icon-outline{
+color: var(--color-yellow);
+font-size: 5rem;
+}
+.icon-outline:hover{
+  display: none;
+
+  }
+
+.icon-color{
+color: var(--color-yellow);
+font-size: 5rem;
+}
+
+.icon-color:hover{
+  color: var(--color-green);
+  font-size: 5rem;
+  }
+
+
+/* stack section */
+#stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack__content {
+  width: 50vw;
+  margin: auto;
+  align-self: center;
+}
+
+.project-detail{
+  padding: var(--spacer-sm) 0 ;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .about__content {
+    flex-direction: column-reverse;
+  }
+
+  .stack__content {
+    width: auto;
+  }
 }
