@@ -58,8 +58,6 @@ section {
   padding: var(--spacer-lg);
 }
 
-
-
 #contact li,
 #contact a {
   list-style: none;
@@ -243,15 +241,4 @@ font-size: 5rem;
 
 .project-detail{
   padding: var(--spacer-sm) 0 ;
-}
-
-
-@media only screen and (max-width: 768px) {
-  .about__content {
-    flex-direction: column-reverse;
-  }
-
-  .stack__content {
-    width: auto;
-  }
 }

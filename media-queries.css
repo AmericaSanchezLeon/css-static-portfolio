@@ -1,7 +1,14 @@
 @media only screen and (max-width: 600px) {
     h1.title{
           color:var(--color-dark);
+          font-size: 3rem;
         }
-  }
-  
-  
+
+    .about__content {
+            flex-direction: column-reverse;
+          }
+        
+     .stack__content {
+            width: auto;
+          }
+}
