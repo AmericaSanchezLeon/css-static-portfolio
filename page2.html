@@ -6,12 +6,14 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="style.css" rel="stylesheet" />
+  
+  
   <link rel="icon" type="image/svg+xml" href="src/favicon.svg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- importar footer -->
-  <link rel="import" href="src/footer.html">
+  <!-- importr css   -->
+  <link href="style.css" rel="stylesheet" />
+  <link href="media-queries.css" rel="stylesheet"/>
 
   <!-- importar bootstrap  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -63,9 +65,42 @@
   </nav>
   <!-- seccion presentacion  -->
 
+
 <section>
-    <h1 class="title" data-text="This is a test page">This is a test page</h1>
+<!-- Prueba de reasignación de orden en layout mobile -->
+
+<div class="row parent-container">
+  <h2 class="title container-1 col-lg-12 col-6" data-text="Test">Test</h2>
+      <p class="col-lg-6 container-2" > 
+        I’m an unicorn 🦄 I have 6 years of experience un UX/UI, 4 as UI developer and front end developer, and a
+        whole
+        background of 10 years as integral designer.<br /><br />
+        I specialize in reducing the inconsistency between design and development. My goal is to deliver cohesive,
+        functional and usable products. With experience experience in both design and development, I can translate
+        complex user and business needs into intuitive and accesible interfaces that not only meet user expectations
+        but
+        also account for engineering constraints, ensuring a smooth transition from concept to production.
+        <br /><br />
+      
+        I’m also skilled at developing UI components and implementing cleand and organized design systems.
+        <br />
+      
+      </p>
+
+<div class="image-wrapper col-6 col-lg-6 container-3">
+  <img src="src/profile-photo.png" class="col-lg-6 col-9"/>
+  <img src="src/favicon.svg" class="col-lg-3 col-3"/>
+
+</div>
+</div>
+<!-- Teermina prueba de reasignación de orden en layout mobile -->
+
 </section>
+
+
+
+
+
 
 <!-- Script para footer reusable -->
   <script>
