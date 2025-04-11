@@ -36,16 +36,10 @@ body.container-portfolio {
   justify-content: space-between;
   flex-direction: column;
   min-height: 100vh;
+  cursor: url(src/cat_cursor.cur) 15 15, auto;
 }
 
-*::selection {
-  background-color: var(--color-pink);
-  color: var(--color-lighter);
-}
 
-*:focus {
-  background-color: var(--color-periwinkle);
-}
 
 footer.my-footer p {
   background-color: var(--color-light);
@@ -65,18 +59,7 @@ section {
   text-decoration: none;
 }
 
-#contact li:hover,
-#contact a:hover {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--color-purple);
-}
 
-
-button a:hover {
-  color: var(--color-yellow);
-  text-decoration: underline;
-}
 
 /* Fonts */
 h1.title {
@@ -94,18 +77,7 @@ h4 {
   padding: var(--spacer-md);
 }
 
-.title::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 5px;
-  top: 2px;
-  z-index: -1;
-  background-image: linear-gradient(to right, var(--color-yellow), var(--color-orange), var(--color-pink), var(--color-purple));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-}
 
 /* Icons */
 .icon-large {
@@ -124,10 +96,6 @@ h4 {
   z-index: 2;
 }
 
-.navbar .navbar-nav .nav-link:hover {
-  background-color: var(--color-pink);
-  color: var(--color-lighter);
-}
 
 /* styles to make active link different */
 .navbar .navbar-nav .nav-link.active {
@@ -209,7 +177,7 @@ button.my-button:hover {
 /* heart icon */
 .icon-outline{
 color: var(--color-yellow);
-font-size: 5rem;
+font-size: x-large;
 }
 .icon-outline:hover{
   display: none;
@@ -221,10 +189,6 @@ color: var(--color-yellow);
 font-size: 5rem;
 }
 
-.icon-color:hover{
-  color: var(--color-green);
-  font-size: 5rem;
-  }
 
 
 /* stack section */
@@ -251,3 +215,60 @@ font-size: 5rem;
   align-items: center;
 }
 
+/* Pseudo elementos */
+/* Hace que seleccion tenga fondo rosa con letras blancas  */
+*::selection {
+  background-color: var(--color-pink);
+  color: var(--color-lighter);
+}
+
+/* Añade un corazón antes del ancla*/
+a.a-button::before {
+  content: "♥";
+}
+
+/* Añade un corazón despes del ancla cuando está encima el mouse */
+button.my-button:hover::after {
+  content: "♥";
+}
+
+/* Crea sombra con gradiente de color en titulo */
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  z-index: -1;
+  background-image: linear-gradient(to right, var(--color-yellow), var(--color-orange), var(--color-pink), var(--color-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+/* Pseudo clases */
+/* Hace que elemento enfocado tenga fondo azul */
+*:focus {
+  background-color: var(--color-periwinkle);
+}
+
+/* Hace que elemento de la barra de navegación donde se ponga el mouse tenga fondo rosa*/
+.navbar .navbar-nav .nav-link:hover {
+  background-color: var(--color-pink);
+  color: var(--color-lighter);
+}
+
+/* Hace que elemento de la sección de contactos  se ponga el mouse  se ponga morado*/
+#contact li:hover,
+#contact a:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-purple);
+}
+
+/* Hace que el icono cambie de color a verde */
+.icon-color:hover{
+  color: var(--color-green);
+  font-size: 5rem;
+  }
